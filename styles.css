@@ -1,0 +1,210 @@
+/* Basic Reset and Body Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+  background: #222;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #00bcd4;
+  outline: none;
+}
+
+/* Main Sections */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+#about-me {
+  text-align: center;
+}
+
+#about-me h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+#about-me p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Skills List with Icons */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  padding: 0;
+}
+
+#skills li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+}
+
+#skills li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Projects Section - Card Layout */
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#projects article {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  width: 270px;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+#projects article:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+
+#projects img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.7rem;
+}
+
+#projects figcaption {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.3rem;
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contact label {
+  font-weight: 500;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#contact textarea {
+  min-height: 100px;
+}
+
+#contact button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#contact button:hover,
+#contact button:focus {
+  background: #0097a7;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Vendor Prefixes Example */
+#projects article {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
